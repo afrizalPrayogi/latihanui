@@ -1,2 +1,2 @@
 #design contoh
-![design](design latihan ui.png)
+![design](design.png)
