@@ -6,7 +6,7 @@ import 'package:latihan_ui/pages/Daysix.dart';
 import 'package:latihan_ui/pages/Secondsplash.dart';
 import 'package:latihan_ui/pages/Startedscreen.dart';
 import 'package:latihan_ui/pages/Signinscreen.dart';
-
+import 'package:latihan_ui/pages/Dayseven.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -174,7 +174,7 @@ class _ScrollingBackgroundState extends State<ScrollingBackground> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>  Dayfour()),
+                                  builder: (context) => Dayfour()),
                             );
                           },
                           child: Image.asset(
@@ -228,7 +228,7 @@ class _ScrollingBackgroundState extends State<ScrollingBackground> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>const Daysix ()),
+                                  builder: (context) => const Daysix()),
                             );
                           },
                           child: Image.asset(
@@ -255,7 +255,7 @@ class _ScrollingBackgroundState extends State<ScrollingBackground> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Secondsplash()),
+                                  builder: (context) =>  Dayseven()),
                             );
                           },
                           child: Image.asset(

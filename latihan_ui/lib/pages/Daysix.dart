@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:latihan_ui/pages/Daysix2.dart';
 
 class Daysix extends StatefulWidget {
   const Daysix({super.key});
@@ -150,15 +151,24 @@ class _DaysixState extends State<Daysix> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(top: 19, left: 30),
-              child: Text(
-                'Upgrade Now',
-                style: GoogleFonts.poppins(
-                    color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600),
-              ),
-            ),
+                padding: const EdgeInsets.only(top: 19, left: 30),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Daysix2(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Upgrade Now',
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600),
+                  ),
+                )),
             label: '',
           ),
           BottomNavigationBarItem(

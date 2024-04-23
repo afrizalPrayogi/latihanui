@@ -10,7 +10,7 @@ class Dayfive2 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(top: 120),
+        padding: const EdgeInsets.only(top: 90),
         child: Center(
           child: Column(
             children: [
@@ -20,7 +20,7 @@ class Dayfive2 extends StatelessWidget {
                 height: 200,
               ),
               const SizedBox(
-                height: 50,
+                height: 32,
               ),
               Text(
                 'Enjoy Your Meal',
@@ -38,7 +38,7 @@ class Dayfive2 extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
               const SizedBox(
-                height: 50,
+                height: 52,
               ),
               Image.asset(
                 'assets/stars.png',
@@ -46,24 +46,46 @@ class Dayfive2 extends StatelessWidget {
                 height: 50,
               ),
               const SizedBox(
-                height: 42,
+                height: 32,
+              ),
+              LayoutBuilder(
+                builder: (context, Constraints) {
+                  double width = Constraints.maxWidth;
+                  return Container(
+                    width: width * 0.8,
+                    height: 130,
+                    decoration: BoxDecoration(
+                        color: const Color(0xffF8F8F8),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 1,
+                        )),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: 'Your Massage',
+                            hintStyle: messageTextStyle),
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 62,
               ),
               Container(
-                width: 319,
-                height: 130,
+                height: 42,
+                width: 120,
                 decoration: BoxDecoration(
-                    color:const Color(0xffF8F8F8),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: Colors.grey,
-                      width: 1,
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        hintText: 'Your Massage', hintStyle: messageTextStyle),
-                    style: messageTextStyle,
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.blueAccent),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Submit',
+                    style: buttonTextStyle,
                   ),
                 ),
               )
